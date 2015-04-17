@@ -53,4 +53,19 @@ class ProductTest < ActiveSupport::TestCase
     assert product.invalid?
     assert_equal ["has already been taken"], product.errors[:title]
   end
+
+  test "product title length must be in range from 5 to 255 symbols" do
+    product = new_filled_product()
+
+    product.title = 'X' * 4
+    assert product.invalid?
+    assert_equal ["is too short (minimum is 5 characters)"], product.errors[:title]
+
+    product.title = 'X' * 300
+    assert product.invalid?
+    assert_equal ["is too long (maximum is 255 characters)"], product.errors[:title]
+
+    product.title = 'X' * 5
+    assert product.valid?, 'product is invalid'
+  end
 end
