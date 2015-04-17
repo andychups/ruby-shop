@@ -1,0 +1,15 @@
+<h1>HOTFIX</h1>
+
+<h2>Услуги</h2>
+<ul>
+<% @products.each do |product| %>
+  <li>
+    <%= product.title %>
+    <ul>
+      <li><%= sanitize(product.desc) %></li>
+      <li><%= product.price %></li>
+      <li><%= image_tag(product.image_url) %></li>
+    </ul>
+  </li>
+<% end %>
+</ul>
