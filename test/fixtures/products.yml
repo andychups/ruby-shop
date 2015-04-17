@@ -11,3 +11,9 @@ two:
   desc: MyText
   image_url: MyString
   price: 9.99
+
+book:
+  title: Just Book
+  desc: Desc Book
+  image_url: book.png
+  price: 10.35
