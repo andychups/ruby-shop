@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hotfix</title>
+  <title>Hotfix &mdash; <%= @page_title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="layout">
+    <header class="header">
+        <nav>
+            Navigation
+        </nav>
+    </header>
+    <section class="content">
+        <%= yield %>
+    </section>
+    <footer class="footer">
+      Copyright
+    </footer>
+</div>
 </body>
 </html>

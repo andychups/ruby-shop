@@ -7,7 +7,7 @@
     <%= product.title %>
     <ul>
       <li><%= sanitize(product.desc) %></li>
-      <li><%= product.price %></li>
+      <li><%= number_to_currency(product.price) %></li>
       <li><%= image_tag(product.image_url) %></li>
     </ul>
   </li>

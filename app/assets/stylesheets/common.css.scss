@@ -1,0 +1,31 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.layout {
+  padding: 30px;
+  max-width: 1200px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 30px;
+  border: 1px solid red;
+}
+
+.content {
+  padding: 30px;
+  border: 1px solid blue;
+}
+
+.footer {
+  padding: 30px;
+  border: 1px solid green;
+}
