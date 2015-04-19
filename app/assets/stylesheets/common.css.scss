@@ -17,15 +17,22 @@ html, body {
 
 .header {
   padding: 30px;
-  border: 1px solid red;
+}
+
+.nav {
+  margin-top: 30px;
+}
+
+.header__logo {
+  text-align: center;
 }
 
 .content {
   padding: 30px;
-  border: 1px solid blue;
+  border-top: 1px solid #eeeeee;
 }
 
 .footer {
   padding: 30px;
-  border: 1px solid green;
+  border-top: 1px solid #eeeeee;
 }

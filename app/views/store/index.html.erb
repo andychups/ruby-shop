@@ -1,15 +1,14 @@
-<h1>HOTFIX</h1>
-
-<h2>Услуги</h2>
-<ul>
-<% @products.each do |product| %>
-  <li>
-    <%= product.title %>
-    <ul>
-      <li><%= sanitize(product.desc) %></li>
-      <li><%= number_to_currency(product.price) %></li>
-      <li><%= image_tag(product.image_url) %></li>
-    </ul>
-  </li>
-<% end %>
-</ul>
+<table border="1" class="catalog">
+    <% cache ['store', Product.latest] do %>
+        <% @products.each do |product| %>
+            <% cache ['entry', product] do %>
+                <tr class="catalog__item">
+                    <td class="catalog__item-name"><%= product.title %></td>
+                    <td class="catalog__item-desc"><%= sanitize(product.desc) %></td>
+                    <td class="catalog__item-price"><%= number_to_currency(product.price) %></td>
+                    <td class="catalog__item-image_url"><%= image_tag(product.image_url) %></td>
+                </tr>
+            <% end %>
+        <% end %>
+    <% end %>
+</table>
