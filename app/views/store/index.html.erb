@@ -7,6 +7,7 @@
                     <td class="catalog__item-desc"><%= sanitize(product.desc) %></td>
                     <td class="catalog__item-price"><%= number_to_currency(product.price) %></td>
                     <td class="catalog__item-image_url"><%= image_tag(product.image_url) %></td>
+                    <td><%= button_to 'В корзину', line_items_path(product_id: product) %></td>
                 </tr>
             <% end %>
         <% end %>
