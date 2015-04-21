@@ -19,9 +19,8 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ru:
   times:
-    zero: en_zero
-    one: en_one
-    few: en_few
-    other: en_other
+    one: раз
+    few: раза
+    other: раз
