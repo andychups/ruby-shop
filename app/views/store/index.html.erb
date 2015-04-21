@@ -1,3 +1,5 @@
+Session debug counter: <%= @counter %> <%= I18n.translate :times, :count => @counter %>
+
 <table border="1" class="catalog">
     <% cache ['store', Product.latest] do %>
         <% @products.each do |product| %>
