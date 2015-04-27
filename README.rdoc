@@ -3,5 +3,5 @@
 <tt>rail server</tt>
 <tt>rake db:migrate</tt>
 <tt>rake test</tt>
+<tt>rake test:controllers</tt>
 <tt>rake doc:app</tt>
-
