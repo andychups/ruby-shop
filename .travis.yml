@@ -4,7 +4,6 @@ rvm:
 env:
   - DB=mysql
 script:
-  - rake db:migrate
   - rake test
 before_script:
   - mysql -e 'create database hotfix_testing;'
