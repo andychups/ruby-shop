@@ -1,5 +1,7 @@
 == README
 
+{<img src="https://travis-ci.org/andychups/ruby-shop.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/andychups/ruby-shop]
+
 <tt>rail server</tt>
 <tt>rake db:migrate</tt>
 <tt>rake test</tt>
