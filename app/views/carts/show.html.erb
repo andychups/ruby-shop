@@ -2,8 +2,9 @@
 
 <ul>
     <% @cart.line_items.each do |item| %>
-        <li><%= item.quantity %> &times; <%= item.product.title %></li>
+        <li><%= item.product.title %> &mdash; <%= item.quantity %> &times; <%= item.product.price %></li>
     <% end %>
+    <li><strong>Итого: <%= @total_price %></strong></li>
 </ul>
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
