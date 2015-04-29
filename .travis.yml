@@ -4,7 +4,6 @@ rvm:
 env:
   - DB=mysql
 script:
-  - bundle exec
-  - rake test
+  - bundle exec rake test
 before_script:
   - mysql -e 'create database hotfix_testing;'
