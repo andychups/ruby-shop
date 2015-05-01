@@ -1,0 +1,8 @@
+<h1>Корзина</h1>
+
+<ul>
+  <% @cart.line_items.each do |item| %>
+      <li><%= item.product.title %> &mdash; <%= item.quantity %> &times; <%= item.product.price %></li>
+  <% end %>
+  <li><strong>Итого: <%= @total_price %></strong></li>
+</ul>

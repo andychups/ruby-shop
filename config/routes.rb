@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
+  get 'cart' => 'cart#index'
+
   root 'store#index'
 
   # Example of regular route:
