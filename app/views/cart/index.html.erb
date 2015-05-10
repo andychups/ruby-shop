@@ -10,7 +10,10 @@
         end
   %>
       <li><strong>Итого: <%= number_to_currency(@total_price) %></strong></li>
-      <li><%= button_to 'Очистить корзину', @cart, method: :delete, data: {confirm: 'Вы уверены?'} %></li>
+      <li>
+        <%= button_to 'Оформить заказ', new_order_path, method: :get %>
+        <%= button_to 'Очистить корзину', @cart, method: :delete, data: {confirm: 'Вы уверены?'} %>
+      </li>
   <%
      else
   %>
