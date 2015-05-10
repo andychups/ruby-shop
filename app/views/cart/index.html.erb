@@ -5,11 +5,11 @@
      if (@cart)
         @cart.line_items.each do |item|
   %>
-      <li><%= item.product.title %> &mdash; <%= item.quantity %> &times; <%= item.product.price %></li>
+      <li><%= item.product.title %> &mdash; <%= item.quantity %> &times; <%= number_to_currency(item.total_price) %></li>
   <%
         end
   %>
-      <li><strong>Итого: <%= @total_price %></strong></li>
+      <li><strong>Итого: <%= number_to_currency(@total_price) %></strong></li>
       <li><%= button_to 'Очистить корзину', @cart, method: :delete, data: {confirm: 'Вы уверены?'} %></li>
   <%
      else
